@@ -51,10 +51,22 @@ body {
   margin-bottom: 32px;
 }
 
-.options {
+#optionsContainer {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
   row-gap: 15px;
+  gap: 160px;
+}
+
+.optionsText {
+  display: flex;
+  flex: 0, 0, 100%;
+  flex-direction: column;
   column-gap: 30px;
   max-width: 100px;
+}
+
+.optionsInputs {
+  flex: 1;
 }
