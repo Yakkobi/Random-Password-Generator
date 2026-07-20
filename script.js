@@ -78,4 +78,6 @@ let isColor = true;
 const generateButton = document.querySelector(".generateButton");
 const output = document.querySelector(".output");
 
-generateButton.addEventListener("click", function (i) {});
+generateButton.addEventListener("click", function (i) {
+  output.textContent = "New Generated Password TEST";
+});
