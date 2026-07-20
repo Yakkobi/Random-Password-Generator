@@ -72,3 +72,10 @@ const adjectives = [
   "Fearless", "Peaceful", "Cheerful", "Powerful", "Faithful", "Youthful",
   "Talented", "Colorful", "Adorable"
 ];
+
+let isAnimal = true;
+let isColor = true;
+const generateButton = document.querySelector(".generateButton");
+const output = document.querySelector(".output");
+
+generateButton.addEventListener("click", function (i) {});
