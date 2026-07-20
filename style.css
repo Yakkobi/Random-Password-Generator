@@ -59,6 +59,7 @@ body {
   flex-direction: row;
   row-gap: 15px;
   column-gap: 105px;
+  font-size: 15px;
 }
 
 .optionsText {
