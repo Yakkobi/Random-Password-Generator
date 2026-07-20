@@ -21,6 +21,25 @@ const animals = [
 ];
 
 // prettier-ignore
+const nouns = [
+  "Sun", "Sky", "Sea", "Ice", "Ash", "Fog", "Cup", "Box", "Key",
+  "Star", "Moon", "Rock", "Tree", "Leaf", "Lake", "Wave", "Wind",
+  "Rain", "Snow", "Fire", "Cave", "Hill", "Rope", "Lamp", "Ring",
+  "Book", "Door", "Gate", "Bell", "Coin", "Gem", "Song",
+  "Cloud", "River", "Ocean", "Beach", "Stone", "Storm", "Flame",
+  "Grass", "Field", "Forest", "Bridge", "Tower", "Castle", "Island",
+  "Anchor", "Candle", "Feather", "Pillar", "Garden", "Meadow",
+  "Canyon", "Desert", "Valley", "Harbor", "Mirror", "Ribbon",
+  "Basket", "Blanket", "Compass", "Diamond", "Fountain", "Journey",
+  "Kingdom", "Lantern", "Mountain", "Thunder", "Whisper", "Horizon",
+  "Crystal", "Sunset", "Sunrise", "Shadow", "Ember", "Breeze",
+  "Pebble", "Marble", "Timber", "Willow", "Cedar", "Maple",
+  "Blossom", "Meteor", "Comet", "Galaxy", "Nebula", "Voyage",
+  "Odyssey", "Lagoon", "Glacier", "Volcano", "Prairie", "Orchard",
+  "Vineyard", "Cascade", "Summit", "Ridge"
+];
+
+// prettier-ignore
 const colors = [
   "Red", "Tan", "Jet",
   "Blue", "Pink", "Gold", "Gray", "Grey", "Teal", "Navy", "Cyan", "Rose",
