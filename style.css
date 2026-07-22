@@ -43,12 +43,12 @@ body {
 }
 
 .copyButton {
-  margin-top: 4px;
+  margin-top: 8px;
 }
 
 .generateButton {
   margin-top: 15px;
-  margin-bottom: 32px;
+  margin-bottom: 15px;
 }
 
 #optionsContainer {
@@ -74,4 +74,55 @@ body {
   flex-direction: column;
   row-gap: 8px;
   color: aqua;
+}
+
+#title2 {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 900;
+
+  background: linear-gradient(
+    to right,
+    #ff2a2a,
+    #ff7a00,
+    #ffea00,
+    #05ff00,
+    #0051ff,
+    #9a00ff,
+    #ff2a2a
+  );
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  animation: shift-rainbow 4s linear infinite;
+}
+
+#outputField2 {
+  text-align: center;
+}
+
+.copyButton2 {
+  margin-top: 8px;
+}
+
+.generateButton2 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#optionsContainer2 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  row-gap: 15px;
+  column-gap: 105px;
+  font-size: 15px;
 }
