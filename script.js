@@ -75,9 +75,13 @@ const nouns = [
 
 let replaceLettersWithSymbols = true;
 const generateButton = document.querySelector(".generateButton");
+const generateButton2 = document.querySelector(".generateButton2");
 const output = document.querySelector(".output");
+const output2 = document.querySelector(".output2");
 const copyButton = document.querySelector(".copyButton");
+const copyButton2 = document.querySelector(".copyButton2");
 
+//First Generate New Password button.
 generateButton.addEventListener("click", function (generateButtonClick) {
   //Decides if the first word should be a color or a different adjective and returns it to the firstPasswordParameter variable.
   function getFirstPasswordParameter() {
@@ -144,6 +148,19 @@ generateButton.addEventListener("click", function (generateButtonClick) {
   output.textContent = password;
 });
 
+//First Copy Password button.
+copyButton.addEventListener("click", function (copyButtonClick) {
+  navigator.clipboard.writeText(output.textContent);
+});
+
+//Seconnd Generate New Password button.
+generateButton2.addEventListener("click", function (generateButton2Click) {
+  let password2 = "Your new password TEST";
+
+  output2.textContent = password2;
+});
+
+//Second Copy Password button.
 copyButton.addEventListener("click", function (copyButtonClick) {
   navigator.clipboard.writeText(output.textContent);
 });
