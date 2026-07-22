@@ -73,8 +73,7 @@ const nouns = [
   "Vineyard", "Cascade", "Summit", "Ridge"
 ];
 
-let isAnimal = true;
-let isColor = true;
+let replaceLettersWithSymbols = true;
 const generateButton = document.querySelector(".generateButton");
 const output = document.querySelector(".output");
 const copyButton = document.querySelector(".copyButton");
@@ -124,13 +123,25 @@ generateButton.addEventListener("click", function (generateButtonClick) {
   let firstNumber = Math.floor(Math.random() * 10);
   let secondNumber = Math.floor(Math.random() * 10);
 
-  output.textContent =
+  //Replaces the first a/A and the first s/S in the generated password with a @ and a $ symbol respectively.
+  let password =
     combineFirstAndSecondWords(
       firstPasswordParameter,
       secondPasswordParameter,
     ) +
     firstNumber +
     secondNumber;
+
+  if (replaceLettersWithSymbols) {
+    password = password.replace("a", "@");
+    password = password.replace("A", "@");
+    password = password.replace("s", "$");
+    password = password.replace("S", "$");
+  } else {
+    password = password;
+  }
+
+  output.textContent = password;
 });
 
 copyButton.addEventListener("click", function (copyButtonClick) {
