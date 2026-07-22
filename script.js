@@ -161,6 +161,6 @@ generateButton2.addEventListener("click", function (generateButton2Click) {
 });
 
 //Second Copy Password button.
-copyButton.addEventListener("click", function (copyButtonClick) {
-  navigator.clipboard.writeText(output.textContent);
+copyButton2.addEventListener("click", function (copyButton2Click) {
+  navigator.clipboard.writeText(output2.textContent);
 });
