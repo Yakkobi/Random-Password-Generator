@@ -77,6 +77,7 @@ let isAnimal = true;
 let isColor = true;
 const generateButton = document.querySelector(".generateButton");
 const output = document.querySelector(".output");
+const copyButton = document.querySelector(".copyButton");
 
 generateButton.addEventListener("click", function (generateButtonClick) {
   function getFirstPasswordParameter() {
@@ -115,4 +116,8 @@ generateButton.addEventListener("click", function (generateButtonClick) {
   const firstPart = getFirstPasswordParameter();
   const secondPart = getSecondPasswordParameter();
   output.textContent = getWholePassword(firstPart, secondPart);
+});
+
+copyButton.addEventListener("click", function (copyButtonClick) {
+  navigator.clipboard.writeText(output.textContent);
 });
