@@ -80,42 +80,51 @@ const output = document.querySelector(".output");
 const copyButton = document.querySelector(".copyButton");
 
 generateButton.addEventListener("click", function (generateButtonClick) {
+  //Decides if the first word should be a color or a different adjective and returns it to the firstPasswordParameter variable.
   function getFirstPasswordParameter() {
     let passwordPartOne = Math.random();
 
     if (passwordPartOne <= 0.54) return "color";
     else return "adjective";
   }
+  const firstPasswordParameter = getFirstPasswordParameter();
 
+  //Decides if the first word should be an animal or a noun and returns it to the secondPasswordParameter variable.
   function getSecondPasswordParameter() {
     let passwordPartTwo = Math.random();
 
     if (passwordPartTwo <= 0.54) return "animal";
     else return "noun";
   }
+  const secondPasswordParameter = getSecondPasswordParameter();
 
-  function getWholePassword(firstPart, secondPart) {
+  //Mashes the first and second words together when combineFirstAndSecondWords() is called.
+  function combineFirstAndSecondWords(
+    firstPasswordParameter,
+    secondPasswordParameter,
+  ) {
     let firstWord;
     let secondWord;
 
-    if (firstPart === "color") {
+    if (firstPasswordParameter === "color") {
       firstWord = colors[Math.floor(Math.random() * colors.length)];
-    } else if (firstPart === "adjective") {
+    } else if (firstPasswordParameter === "adjective") {
       firstWord = adjectives[Math.floor(Math.random() * adjectives.length)];
     }
 
-    if (secondPart === "animal") {
+    if (secondPasswordParameter === "animal") {
       secondWord = animals[Math.floor(Math.random() * animals.length)];
-    } else if (secondPart === "noun") {
+    } else if (secondPasswordParameter === "noun") {
       secondWord = nouns[Math.floor(Math.random() * nouns.length)];
     }
 
     return firstWord + secondWord;
   }
 
-  const firstPart = getFirstPasswordParameter();
-  const secondPart = getSecondPasswordParameter();
-  output.textContent = getWholePassword(firstPart, secondPart);
+  output.textContent = combineFirstAndSecondWords(
+    firstPasswordParameter,
+    secondPasswordParameter,
+  );
 });
 
 copyButton.addEventListener("click", function (copyButtonClick) {
