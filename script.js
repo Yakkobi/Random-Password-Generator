@@ -93,5 +93,26 @@ generateButton.addEventListener("click", function (generateButtonClick) {
     else return "noun";
   }
 
-  output.textContent = "New Generated Password TEST";
+  function getWholePassword(firstPart, secondPart) {
+    let firstWord;
+    let secondWord;
+
+    if (firstPart === "color") {
+      firstWord = colors[Math.floor(Math.random() * colors.length)];
+    } else if (firstPart === "adjective") {
+      firstWord = adjectives[Math.floor(Math.random() * adjectives.length)];
+    }
+
+    if (secondPart === "animal") {
+      secondWord = animals[Math.floor(Math.random() * animals.length)];
+    } else if (secondPart === "noun") {
+      secondWord = nouns[Math.floor(Math.random() * nouns.length)];
+    }
+
+    return firstWord + secondWord;
+  }
+
+  const firstPart = getFirstPasswordParameter();
+  const secondPart = getSecondPasswordParameter();
+  output.textContent = getWholePassword(firstPart, secondPart);
 });
