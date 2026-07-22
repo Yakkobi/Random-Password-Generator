@@ -1,4 +1,38 @@
 // prettier-ignore
+const colors = [
+  "Red", "Tan", "Jet",
+  "Blue", "Pink", "Gold", "Gray", "Grey", "Teal", "Navy", "Cyan", "Rose",
+  "Rust", "Plum", "Jade", "Ruby", "Aqua",
+  "Green", "Black", "White", "Brown", "Coral", "Amber", "Ivory", "Beige",
+  "Khaki", "Olive", "Slate", "Peach", "Lilac", "Mauve",
+  "Purple", "Orange", "Maroon", "Violet", "Indigo", "Silver", "Bronze",
+  "Copper", "Salmon", "Cherry", "Golden", "Yellow", "Sienna", "Auburn",
+  "Cobalt",
+  "Crimson", "Scarlet", "Emerald", "Magenta", "Fuchsia", "Apricot",
+  "Mustard", "Saffron",
+  "Burgundy", "Charcoal", "Lavender", "Mahogany"
+];
+
+// prettier-ignore
+const adjectives = [
+  "Big", "Sly", "Shy", "Wet", "Dry", "Hot", "Icy",
+  "Bold", "Calm", "Cool", "Dark", "Fast", "Kind", "Loud", "Mild", "Neat",
+  "Pure", "Rare", "Slow", "Soft", "Tall", "Warm", "Wild", "Wise", "Fair",
+  "Firm", "Keen", "Lean", "Sure", "Tidy", "Vast",
+  "Brave", "Fresh", "Happy", "Heavy", "Light", "Quiet", "Quick", "Sharp",
+  "Sweet", "Tough", "Young", "Eager", "Loyal", "Proud", "Solid", "Sunny",
+  "Witty", "Zesty", "Alert", "Rapid", "Merry", "Noble", "Hardy", "Brisk",
+  "Vivid",
+  "Clever", "Gentle", "Bright", "Sturdy", "Steady", "Mighty", "Cheery",
+  "Breezy", "Chilly", "Simple", "Honest", "Humble", "Active", "Frozen",
+  "Modern",
+  "Radiant", "Curious", "Elegant", "Playful", "Genuine", "Serious",
+  "Distant", "Amazing", "Awesome", "Careful", "Massive", "Restful",
+  "Fearless", "Peaceful", "Cheerful", "Powerful", "Faithful", "Youthful",
+  "Talented", "Colorful", "Adorable"
+];
+
+// prettier-ignore
 const animals = [
   "Cat", "Dog", "Fox", "Owl", "Bee", "Ant", "Cow", "Pig", "Rat", "Bat",
   "Cod", "Hen", "Ram", "Elk", "Doe", "Eel",
@@ -39,45 +73,25 @@ const nouns = [
   "Vineyard", "Cascade", "Summit", "Ridge"
 ];
 
-// prettier-ignore
-const colors = [
-  "Red", "Tan", "Jet",
-  "Blue", "Pink", "Gold", "Gray", "Grey", "Teal", "Navy", "Cyan", "Rose",
-  "Rust", "Plum", "Jade", "Ruby", "Aqua",
-  "Green", "Black", "White", "Brown", "Coral", "Amber", "Ivory", "Beige",
-  "Khaki", "Olive", "Slate", "Peach", "Lilac", "Mauve",
-  "Purple", "Orange", "Maroon", "Violet", "Indigo", "Silver", "Bronze",
-  "Copper", "Salmon", "Cherry", "Golden", "Yellow", "Sienna", "Auburn",
-  "Cobalt",
-  "Crimson", "Scarlet", "Emerald", "Magenta", "Fuchsia", "Apricot",
-  "Mustard", "Saffron",
-  "Burgundy", "Charcoal", "Lavender", "Mahogany"
-];
-
-// prettier-ignore
-const adjectives = [
-  "Big", "Sly", "Shy", "Wet", "Dry", "Hot", "Icy",
-  "Bold", "Calm", "Cool", "Dark", "Fast", "Kind", "Loud", "Mild", "Neat",
-  "Pure", "Rare", "Slow", "Soft", "Tall", "Warm", "Wild", "Wise", "Fair",
-  "Firm", "Keen", "Lean", "Sure", "Tidy", "Vast",
-  "Brave", "Fresh", "Happy", "Heavy", "Light", "Quiet", "Quick", "Sharp",
-  "Sweet", "Tough", "Young", "Eager", "Loyal", "Proud", "Solid", "Sunny",
-  "Witty", "Zesty", "Alert", "Rapid", "Merry", "Noble", "Hardy", "Brisk",
-  "Vivid",
-  "Clever", "Gentle", "Bright", "Sturdy", "Steady", "Mighty", "Cheery",
-  "Breezy", "Chilly", "Simple", "Honest", "Humble", "Active", "Frozen",
-  "Modern",
-  "Radiant", "Curious", "Elegant", "Playful", "Genuine", "Serious",
-  "Distant", "Amazing", "Awesome", "Careful", "Massive", "Restful",
-  "Fearless", "Peaceful", "Cheerful", "Powerful", "Faithful", "Youthful",
-  "Talented", "Colorful", "Adorable"
-];
-
 let isAnimal = true;
 let isColor = true;
 const generateButton = document.querySelector(".generateButton");
 const output = document.querySelector(".output");
 
-generateButton.addEventListener("click", function (i) {
+generateButton.addEventListener("click", function (generateButtonClick) {
+  function getFirstPasswordParameter() {
+    let passwordPartOne = Math.random();
+
+    if (passwordPartOne <= 0.54) return "color";
+    else return "adjective";
+  }
+
+  function getSecondPasswordParameter() {
+    let passwordPartTwo = Math.random();
+
+    if (passwordPartTwo <= 0.54) return "animal";
+    else return "noun";
+  }
+
   output.textContent = "New Generated Password TEST";
 });
