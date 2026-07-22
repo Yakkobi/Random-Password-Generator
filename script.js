@@ -121,10 +121,16 @@ generateButton.addEventListener("click", function (generateButtonClick) {
     return firstWord + secondWord;
   }
 
-  output.textContent = combineFirstAndSecondWords(
-    firstPasswordParameter,
-    secondPasswordParameter,
-  );
+  let firstNumber = Math.floor(Math.random() * 10);
+  let secondNumber = Math.floor(Math.random() * 10);
+
+  output.textContent =
+    combineFirstAndSecondWords(
+      firstPasswordParameter,
+      secondPasswordParameter,
+    ) +
+    firstNumber +
+    secondNumber;
 });
 
 copyButton.addEventListener("click", function (copyButtonClick) {
