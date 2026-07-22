@@ -124,7 +124,6 @@ generateButton.addEventListener("click", function (generateButtonClick) {
   let secondNumber = Math.floor(Math.random() * 10);
 
   //Replaces the first A/a and the first S/s in the generated password with a @ and a $ symbol respectively.
-  //TODO: fix bug that replaces more than just one occurrence of an A/a and S/s in the final output (it's doing this because the first occurrence is being replaced for EACH WORD).
   let password =
     combineFirstAndSecondWords(
       firstPasswordParameter,
@@ -134,10 +133,10 @@ generateButton.addEventListener("click", function (generateButtonClick) {
     secondNumber;
 
   if (replaceLettersWithSymbols) {
-    password = password.replace("a", "@");
-    password = password.replace("A", "@");
-    password = password.replace("s", "$");
-    password = password.replace("S", "$");
+    password = password.replaceAll("a", "@");
+    password = password.replaceAll("A", "@");
+    password = password.replaceAll("s", "$");
+    password = password.replaceAll("S", "$");
   } else {
     password = password;
   }
